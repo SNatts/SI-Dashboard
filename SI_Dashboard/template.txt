@@ -1,0 +1,268 @@
+MODULE Module1
+    CONST robtarget Home_Pick:=[[-0.000035044,824.999971787,903.179547773],[0.000000016,-0.707106781,0.707106781,0.000000008],[1,-1,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Start_Red_T0:=[[-795.999934713,981.600027034,422.59398688],[0.000000022,-0.707106749,0.707106814,0.000000004],[1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Pick_Red_T0:=[[-795.999937597,981.600030933,125.093994566],[0.000000001,-0.707106749,0.707106814,0.000000008],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Home:=[[825,0,1069],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Home_45de:=[[583.363073451,583.363073451,1069.000022352],[-0.000000005,-0.382683432,0.923879533,-0.000000002],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Home_Can:=[[0,824.999969244,1069.000022352],[-0.000000004,-0.707106781,0.707106781,-0.000000004],[1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Start_Red_T0:=[[-795.999934713,981.600027034,422.593987412],[0.000000022,0.707106814,0.707106749,-0.000000004],[1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Pick_Red_T0:=[[-796,981.6,125.094],[0,0.707106781,0.707106781,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Start_Yellow_T0:=[[-397.999934713,981.599990418,422.593997228],[0.000000022,-0.707106749,0.707106814,0.000000004],[1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Pick_Yellow_T0:=[[-398,981.6,125.094],[0,-0.707106781,0.707106781,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Start_Green_T0:=[[0.0000764,981.599920275,422.594021497],[0.000000009,-0.707106781,0.707106781,-0.000000009],[0,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Pick_Green_T0:=[[0,981.6,125.094],[0,-0.707106781,0.707106781,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Start_Blue_T0:=[[398.000048306,981.599938482,422.594016656],[-0.000000017,0.707106793,-0.70710677,-0.000000016],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Pick_Blue_T0:=[[398,981.6,125.094],[0,-0.707106781,0.707106781,0],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Start_Gray_T0:=[[796.000048306,981.599951428,422.593998082],[-0.000000017,0.707106793,-0.70710677,-0.000000016],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac1_Pick_Gray_T0:=[[796.000062403,981.59988459,125.093978806],[0.000000001,-0.707106749,0.707106814,0.000000008],[0,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Start_Yellow_T0:=[[-397.999934713,981.599990418,422.59399776],[0.000000022,0.707106814,0.707106749,-0.000000004],[1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Pick_Yellow_T0:=[[-398,981.6,125.094],[0,0.707106781,0.707106781,0],[1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Start_Green_T0:=[[0.0000764,981.599920275,422.594021497],[0.000000009,0.707106781,0.707106781,0.000000009],[0,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Pick_Green_T0:=[[0,981.6,125.094],[0,0.707106781,0.707106781,0],[0,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Start_Blue_T0:=[[398.000048306,981.599938482,422.594016656],[-0.000000016,0.70710677,0.707106793,-0.000000017],[0,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Pick_Blue_T0:=[[398,981.6,125.094],[0,0.707106781,0.707106781,0],[0,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Start_Gray_T0:=[[796.000048306,981.599951428,422.593998082],[-0.000000016,0.70710677,0.707106793,-0.000000017],[0,0,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Vac2_Pick_Gray_T0:=[[796,981.6,125.094],[0,0.707106781,0.707106781,0],[0,-1,1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Start_Box_1:=[[1127.150055394,-95.200201869,630.190536072],[0.000000008,0,1,-0.000000001],[-1,-1,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_Box_1:=[[1127.15,-95.2,127.09],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Start_Box_2:=[[1127.150339041,-3.200195421,630.190473127],[0,0,1,0],[-1,0,-1,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_Box_2:=[[1127.15,-3.2,127.09],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Start_Box_3:=[[1127.150339041,88.799804579,630.190473127],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    CONST robtarget Place_Box_3:=[[1127.15,88.8,127.09],[0,0,1,0],[0,0,0,0],[9E+09,9E+09,9E+09,9E+09,9E+09,9E+09]];
+    PROC Vac1_Red()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac1_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Go_Can()
+        MoveL Home,v1000,z100,tool0\WObj:=wobj0;
+        MoveC Home_45de,Home_Can,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Go_Home()
+        MoveL Home_Can,v1000,z100,tool0\WObj:=wobj0;
+        MoveC Home_45de,Home,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC A_Test_Set_Pick_Place()
+        WaitDI Start_Robot,1;
+        SetDO Place_Com,0;
+        Vac1_Red;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        Vac2_Yellow;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        Go_Position_1;
+        Vac1_Red;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        Vac2_Yellow;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        Go_Position_2;
+        Vac1_Red;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        Vac2_Gray;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        Go_Position_3;
+        SetDO Place_Com,1;
+        WaitTime\InPos,0.5;
+        SetDO Place_Com,0;
+        MoveL Home,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac2_Red()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac2_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac1_Yellow()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac1_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac1_Green()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac1_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac1_Blue()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac1_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac1_Gray()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Gray_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Gray_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac1_Start_Gray_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac2_Yellow()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac2_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac2_Green()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac2_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac2_Blue()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac2_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Vac2_Gray()
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Gray_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Gray_T0,v1000,z100,tool0\WObj:=wobj0;
+        WaitTime\InPos,0.5;
+        MoveL Vac2_Start_Gray_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Go_Position_1()
+        MoveL Start_Box_1,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Place_Box_1,v1000,z100,tool0\WObj:=wobj0;
+        SetDO Sen_Place,0;
+        WaitTime\InPos,0.5;
+        SetDO Sen_Place,1;
+        WaitTime\InPos,0.5;
+        SetDO Sen_Place,0;
+        MoveL Start_Box_1,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Go_Position_2()
+        MoveL Start_Box_2,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Place_Box_2,v1000,z100,tool0\WObj:=wobj0;
+        SetDO Sen_Place,0;
+        WaitTime\InPos,0.5;
+        SetDO Sen_Place,1;
+        WaitTime\InPos,0.5;
+        SetDO Sen_Place,0;
+        MoveL Start_Box_2,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Go_Position_3()
+        MoveL Start_Box_3,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Place_Box_3,v1000,z100,tool0\WObj:=wobj0;
+        SetDO Sen_Place,0;
+        WaitTime\InPos,0.5;
+        SetDO Sen_Place,1;
+        WaitTime\InPos,0.5;
+        SetDO Sen_Place,0;
+        MoveL Start_Box_3,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Main()
+        WaitDI Start_Robot,1;
+        SetDO Place_Com,0;
+        Go_Can;
+	$REPLACE HERE$
+        SetDO Place_Com,1;
+        WaitTime\InPos,0.5;
+        WaitDI Start_Robot,0;
+        MoveL Home,v1000,z100,tool0\WObj:=wobj0;
+        SetDO Place_Com,0;
+    ENDPROC
+    PROC Testtt()
+        WaitDI Start_Robot,1;
+        SetDO Place_Com,0;
+        Go_Can;
+        Go_Position_1;
+        Go_Position_2;
+        Go_Position_3;
+        SetDO Place_Com,1;
+        WaitTime\InPos,0.5;
+        SetDO Place_Com,0;
+        MoveL Home,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Test_Position()
+        Go_Can;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Red_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Yellow_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Green_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Pick_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac1_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Pick_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Vac2_Start_Blue_T0,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+        MoveL Home_Pick,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+    PROC Path_10()
+        WaitDI Start_Robot,1;
+        SetDO Place_Com,0;
+        Go_Can;
+        Vac1_Gray;
+        Vac2_Red;
+        Go_Position_1;
+        Vac1_Red;
+        Vac2_Gray;
+        Go_Position_2;
+        Vac1_Gray;
+        Vac2_Red;
+        Go_Position_3;
+        SetDO Place_Com,1;
+        WaitTime\InPos,0.5;
+        WaitDI Start_Robot,0;
+        MoveL Home,v1000,z100,tool0\WObj:=wobj0;
+        SetDO Place_Com,0;
+        WaitDI Start_Robot,1;
+        Go_Can;
+        Vac1_Red;
+        Vac2_Gray;
+        Go_Position_1;
+        Vac1_Gray;
+        Vac2_Red;
+        Go_Position_2;
+        Vac1_Red;
+        Vac2_Gray;
+        Go_Position_3;
+        SetDO Place_Com,1;
+        WaitTime\InPos,0.5;
+        WaitDI Start_Robot,0;
+        MoveL Home,v1000,z100,tool0\WObj:=wobj0;
+    ENDPROC
+ENDMODULE
